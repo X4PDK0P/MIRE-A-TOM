@@ -8,9 +8,6 @@ router = APIRouter()
 async def create_formula_endpoint(formula: FormulaCreate):
     return await create_formula(formula)
 
-@router.get("/{id}", response_model=FormulaResponse)
-async def get_formula(id: int):
-    formula = await get_formula_by_id(id)
-    if not formula:
-        raise HTTPException(status_code=404, detail="Formula not found")
-    return formula
+@router.get("/")
+async def get_formulas():
+    return {"message": "List of formulas"}
