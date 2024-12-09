@@ -1,7 +1,9 @@
+from typing import List
+
 from pydantic import BaseModel
 
 class FormulaAnalysisRequest(BaseModel):
-    formula: str
+    formula: List[str]  # Список формул в формате LaTeX
 
 class FormulaAnalysisResponse(BaseModel):
-    similarity_percentage: float
+    results: List[dict]  # Список результатов для каждой формулы
