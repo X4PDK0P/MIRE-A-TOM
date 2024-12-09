@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <title>Поиск формул</title>
-</head>
-<body>
-    <div class="search-container">
-        <h1>Поиск формул</h1>
-        <form class="search-box" action="/search">
-            <label for="formula" class="visually-hidden">Поиск формул</label>
-            <input type="text" name="formula" placeholder="Введите формулу для поиска" />
-            <button type="submit">Найти</button>
-        </form>
-    </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Стилизуем поля ввода</title>
+    <link
+      rel="stylesheet"
+      href="https://code.s3.yandex.net/web-code/fonts/fonts.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <form>
+      <h1>Поиск формул</h1>
+      <label>
+        <span>Введите ваш запрос</span>
+        <input type="text" pattern=".{1,}" placeholder="Введите формулу для поиска" required/>
+      </label>
+      <button type="submit">Найти формулу</button>
+    </form>
+  </body>
 </html>

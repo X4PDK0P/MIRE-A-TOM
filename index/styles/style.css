@@ -1,55 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #f4f4f9;
+  height: 100%;
 }
 
-.visually-hidden {
-  position: absolute; 
-  width: 1px; 
-  height: 1px;
-  margin: -1px;
-  padding: 0; 
-  border: 0; 
-  clip: rect(0 0 0 0);
-  overflow: hidden; 
-}
-
-.search-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-.search-container h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.search-box {
+body {
   display: flex;
+  justify-content: center;
   align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 5px;
+  min-width: 650px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  background-image: url(https://get.wallhere.com/photo/trees-landscape-forest-mountains-lake-water-rock-nature-snow-clouds-Canada-British-Columbia-national-park-fjord-mountain-pass-wilderness-Alps-walking-summit-plateau-ridge-cloud-mountain-adventure-highland-loch-geology-mountainous-landforms-landform-geographical-feature-mountain-range-fell-157281.jpg);
 }
-.search-box input {
-  flex-grow: 1;
-  border: none;
-  padding: 10px;
-  font-size: 16px;
+
+form {
+  display: grid;
+  gap: 20px;
+  width: 600px;
+  padding: 35px;
+  background-color: #dad2e0;
+}
+
+h1 {
+  text-align: center;
+  font-family: inherit;
+  text-transform: uppercase;
+}
+
+h1::selection {
+  color: #58203E;
+  background-color: #F85AE7;  
+}
+
+label,
+input {
+  width: 100%;
+}
+
+label span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+span::selection {
+ color: #58203E;
+ background-color: #F85AE7;
+}
+
+button {
+  border: 1px solid #000;
+  padding: 10px 65px;
+  color: #000;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: inherit;
+  text-transform: uppercase;
+  background-color: transparent;
+  transition: box-shadow 0.6s ease;
+}
+
+button:hover {
+  box-shadow: inset 0 0 0 100px rgb(0 0 0 / 0.5);
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 2px solid #000;
+  outline-offset: 0;
+}
+
+button[disabled] {
+  opacity: 0.6;
+}
+
+button::selection {
+ color: #58203E;
+ background-color: #F85AE7;
+}
+
+input {
+  border: 1px solid #000;
+  padding: 10px 15px;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent;
+}
+
+input::placeholder {
+  color: rgb(0 0 0 / 0.6);
+}
+
+input:focus {
   outline: none;
 }
-.search-box button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
+
+input:focus-visible {
+  outline: 2px solid #9072c5;
+  outline-offset: 0px;
+  caret-color: #9072c5;
+  color: #9072c5;
 }
-.search-box button:hover {
-  background-color: #45a049;
+
+input::selection {
+ color: #58203E;
+ background-color: #F85AE7;
 }
